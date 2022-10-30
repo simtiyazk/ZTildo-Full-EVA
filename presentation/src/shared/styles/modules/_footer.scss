@@ -1,0 +1,30 @@
+.global-footer {
+    position: absolute;
+    bottom: 0;
+
+    img {
+        width: 100%;
+    }
+
+    button {
+        display: block;
+        height: 156px;
+        left: 0;
+        position: absolute;
+        text-indent: -9999px;
+        top: 0;
+        width: 784px;
+    }
+    
+    .nav-open & {
+        z-index: 15;
+    }
+
+    .goToSlide {
+        bottom: 0;
+        height: 111px;
+        position: absolute;
+        right: 0;
+        width: 240px;
+    }
+}

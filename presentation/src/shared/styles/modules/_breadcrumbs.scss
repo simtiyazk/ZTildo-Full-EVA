@@ -1,0 +1,25 @@
+.breadcrumbs {
+   list-style: none;
+   display: flex;
+   position: absolute;
+   top: 13px;
+   left: 100px;
+
+   li {
+      opacity: 1;
+   }
+
+   a {
+      font-size: 14px;
+      text-decoration: underline;
+      margin-right: 27px;
+      font-family: $font-cerapro-medium;
+      text-decoration: none;
+      border-bottom: 1px solid $astronautBlue;
+
+      &.selected {
+         font-family: $font-cerapro-bold;
+         border: none;
+      }
+   }
+}

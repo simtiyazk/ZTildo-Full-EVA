@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>veeva-slide</title>
+
+	<!-- build:css ../shared/styles/main.css -->
+	<!-- inject:css -->
+	<!-- endinject -->
+   <link rel="stylesheet" href="../shared/styles/main.css">
+   <!-- endbuild -->
+   <!-- build:css assets/styles/slide.css -->
+   <link rel="stylesheet" href="./assets/styles/slide.css" />
+   <!-- endbuild -->
+</head>
+
+<body>
+<main id="ZTlido-Full-EVA_13_00" class="slide">
+
+   <!-- Page Body -->
+
+   <section class="global-content">
+      <div class="wrapper">
+         <!-- Components here -->
+         <div class="content">
+            <!-- Slide Content -->
+            <ul class="slide__ctas">
+               <li id="cta-0" class="slide__cta"><a class="goToSlide" data-slide="ZTlido-Full-EVA_10_00"></a></li>
+               <li id="cta-1" class="slide__cta"><a class="goToSlide" data-slide="ZTlido-Full-EVA_11_00"></a></li>
+               <li id="cta-2" class="slide__cta"><a class="goToSlide" data-slide="ZTlido-Full-EVA_12_00"></a></li>
+               <li id="cta-3" class="slide__cta"><a class="goToSlide" data-slide="ZTlido-Full-EVA_13_50"></a></li>
+               <li id="cta-4" class="slide__cta"><a class="goToSlide" data-slide="ZTlido-Full-EVA_14_00"></a></li>
+               <li id="cta-5" class="slide__cta"><a class="goToSlide" data-slide="ZTlido-Full-EVA_15_00"></a></li>
+               <li id="cta-6" class="slide__cta"><a class="goToSlide" data-slide="ZTlido-Full-EVA_00_00"></a></li>
+               <li id="cta-7" class="slide__cta"><a class="popup-trigger" data-popup="popup_1"></a></li>
+               <li id="cta-8" class="slide__cta"><a class="popup-trigger" data-popup="popup_2"></a></li>
+               <li id="cta-9" class="sd-btn slide__cta"><a class="popup-trigger" data-popup="sd-popup"></a></li>
+               <li id="cta-10" class="slide__cta"><a class="goToSlide" data-slide="ZTlido-Full-EVA_15_00"></a></li>
+               <li id="cta-11" class="slide__cta"><a class="popup-trigger" data-popup="pi-popup"></a></li>
+               <li id="cta-12" class="ref-btn slide__cta"><a class="popup-trigger" data-popup="ref-popup"></a></li>
+            </ul>
+
+         </div>
+      </div>
+      <!-- Pop Ups here-->
+      {{> popup-tabs-patchAnimation id="popup_1" type="popup-tab-left" prefix="popup-tab" }}
+      {{> content-popup id="popup_2" img="assets/images/popup-2.png"}}
+      {{> popup-tabs id="sd-popup" type="study-popup study-popup--sm" prefix="study" tabs=3 }}
+      {{> isi}}
+      {{> pi}}
+      {{> ref}}
+   </section>
+
+</main>
+</body>
+
+<!-- build:js ../shared/scripts/main.js -->
+<!-- inject:js -->
+<!-- endinject -->
+<script src="../shared/scripts/fastclick.js"></script>
+<script src="../shared/scripts/jquery.js"></script>
+<script src="../shared/scripts/iscroll.js"></script>
+<script src="../shared/scripts/hammer.min.js"></script>
+<script src="../shared/scripts/main.js"></script>
+<script src="../shared/scripts/footerISI.js"></script>
+<!-- endbuild -->
+<script src="./assets/scripts/global_events.js"></script>
+<!-- build:js assets/scripts/slide.js -->
+<script src="./assets/scripts/slide.js"></script>
+<script src="./assets/scripts/patchAnimation.js"></script>
+<script src="./assets/scripts/qSequencer.js"></script>
+<!-- endbuild -->
+
+</html>

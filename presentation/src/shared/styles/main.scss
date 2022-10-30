@@ -1,0 +1,407 @@
+@import 'core/variables';
+@import 'helpers/mixins';
+@import 'core/fonts';
+@import 'core/typo';
+
+@import "vendors/slick";
+
+@import "modules/index";
+
+@import "modules/patchAnimation";
+
+/* inject:scss */
+/* endinject */
+
+/********** CLEAR VALUES *********/
+
+* { padding: 0; margin: 0; box-sizing:border-box; }
+html.localhost {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: lightgray;
+
+   body {
+      background-color: $white;
+   }
+}
+a img { border: none; }
+a { text-decoration: none; outline: 0; }
+sup {
+   position: relative;
+   top: -.65em;
+   font-size: .7em;
+   line-height: .5em;
+   vertical-align: baseline;
+
+   span {
+      font-size: 0.7em;
+      top: -.5em;
+      position: relative;
+   }
+}
+img { display:block; }
+
+table {
+   border-collapse: collapse;
+}
+
+/********** CLASS STYLES *********/
+
+/*layout helper classes*/
+.fr { float: right; }
+.fl { float: left; }
+.cf { clear:both !important; }
+.u { text-decoration: underline; }
+.c { text-align: center; }
+.uc { text-transform: uppercase; }
+.lc { text-transform: lowercase; }
+.no-bottom { margin-bottom:0 !important; }
+.bottom10 { margin-bottom:10px !important; }
+
+
+/********** STRUCTURE *********/
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+   background-color: $white;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: rgba(0,0,0,0); //hide ipad highlight tint
+	//font rendering
+	font-smoothing: antialiased;
+	height: $sh;
+	width: $sw;
+   overflow: auto;
+}
+
+/********** GLOBAL CLASS STYLES *********/
+
+.slide {
+   position: relative;
+   top:0;
+   left:0;
+   width: $sw;
+   height: $sh;
+	overflow: hidden;
+
+	.logo {
+		position: absolute;
+      top: 17px;
+      right: 37px;
+      width: 225px;
+		  z-index: 2;
+
+		img {
+			width: 100%;
+		}
+   }
+
+   .global-content {
+      width: $sw;
+      height: $sh;
+      position: absolute;
+      left: 0px;
+      top: 0;
+
+      .content {
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+
+         .sd-btn {
+            top: 95.382%;
+            left: 43.95%;
+            width: 11.128%;
+            height: 4.818%;
+         
+            &.actv {
+               background: url(../images/sd-active.png) center no-repeat;
+               background-size: contain;
+            }
+         }
+
+         .ref-btn {
+         
+            &.actv {
+               background: url(../images/ref-active.png) center no-repeat;
+               background-size: contain;
+            }
+         }
+      }
+   }
+
+	.wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: block;
+   }
+
+   &__ctas {
+      list-style: none;
+
+      a {
+         cursor: pointer;
+      }
+   }
+
+	.iscroll-wrapper {
+		position: relative;
+		overflow:hidden;
+
+		.iscroll-content {
+			display:inline-block;
+			list-style:none;
+		}
+		//custom scrollbar styles
+		.iScrollVerticalScrollbar {
+			position:absolute;
+			top:2px; right:0px; bottom:2px;
+			width:6px;
+			background-color:#dbdbdb;
+			border-radius:3px;
+		}
+		//custom scrollbar thumb styles
+		.iScrollIndicator {
+			position:absolute;
+			top:0; right:0;
+			width:6px;
+			border-radius:3px;
+			background-color:#898989;
+		}
+	}
+
+	.scroller {
+		overflow-y: scroll;
+      padding-right: 15px;
+		@include scrollBar();
+   }
+
+   .list {
+      list-style: none;
+      li {
+         list-style: none;
+      }
+   }
+
+   ol {
+      counter-reset: item;
+      > li {
+        counter-increment: item;
+        list-style-type: none;
+      }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+   body {
+      width: 100%;
+      height: 100%;
+   }
+
+   .slide {
+      width: 100%;
+      height: 100%;
+
+      .global-content {
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+
+// ISI styles 
+#isiMain {
+   font-family: "Barlow-Regular";
+   position: absolute;
+   bottom: 9%;
+   height: 9.1%;
+   left: 5.5%;
+   width: 88.5%;
+   color: #57585a;
+
+   p {
+      font-family: "Barlow-SemiBold";
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 15px;
+
+      b {
+         font-family: "Barlow-Bold";
+      }
+
+      &.fixed-title {
+         bottom: -33%;
+         position: absolute;
+         margin-bottom: 5px;
+      }
+   }
+
+   #isi_wrapper {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+
+      .isi {
+         width: 95%;
+         padding-top: 8px;
+         padding-bottom: 5px;
+         // .isi_con {
+         //    background: url("../../../shared/images/cuvitruISI.png") no-repeat;
+         //    background-size: contain;
+         //    width: 90%;
+         //    height: auto;
+         //    margin-left: 52px;
+         //    margin-top: 0px;
+         // }
+
+         h2 {
+            font-family: "Barlow-Bold";
+            font-size: 18px;
+            line-height: 23px;
+            text-transform: uppercase;
+
+            &.sub-head {
+               font-size: 16px;
+               line-height: 20px;
+            }
+         }
+
+         .indication-ar {
+            h2 {
+               margin-bottom: 10px;
+            }
+            p {
+               font-size: 16px;
+               line-height: 20px;
+            }
+         }
+
+         .isi-ar {
+            p {
+            
+               &:last-child {
+                  margin-bottom: 5px;
+               }
+            }
+         }
+         
+      }
+
+      .iScrollVerticalScrollbar {
+         background-color: #d1d2d4 !important;
+         top: 11px !important;
+         right: 5px !important;
+         height: 70% !important;
+         width: 4px !important;
+         position: absolute;
+         overflow: visible !important;
+      }
+
+      .iScrollIndicator {
+         background: #fcb316;
+         height: 9px !important;
+      }
+   }
+}
+
+}
+
+@media screen and (max-width: 1024px) {
+
+      // ISI styles 
+      #isiMain {
+         font-family: "Barlow-Regular";
+         position: absolute;
+         bottom: 9%;
+         height: 9.1%;
+         left: 5.5%;
+         width: 88.5%;
+         color: #57585a;
+   
+         p {
+            font-family: "Barlow-SemiBold";
+            font-size: 12.5px;
+            line-height: 16px;
+            margin-bottom: 15px;
+
+            b {
+               font-family: "Barlow-Bold";
+            }
+   
+            &.fixed-title {
+               bottom: -31%;
+               position: absolute;
+               margin-bottom: 5px;
+            }
+         }
+   
+         #isi_wrapper {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+   
+            .isi {
+               width: 95%;
+               padding-top: 8px;
+               padding-bottom: 5px;
+   
+               h2 {
+                  font-size: 16px;
+                  line-height: 19px;
+                  text-transform: uppercase;
+   
+                  &.sub-head {
+                     font-size: 14px;
+                     line-height: 18px;
+                  }
+               }
+               
+               .indication-ar {
+                  h2 {
+                     font-size: 14px;
+                     margin-bottom: 10px;
+                  }
+                  p {
+                     font-size: 14px;
+                     line-height: 18px;
+                  }
+               }
+
+               .isi-ar {
+                  p {
+                  
+                     &:last-child {
+                        margin-bottom: 5px;
+                     }
+                  }
+               }
+            }
+   
+            .iScrollVerticalScrollbar {
+               background-color: #d1d2d4 !important;
+               top: 11px !important;
+               right: 5px !important;
+               height: 70% !important;
+               width: 4px !important;
+               position: absolute;
+               overflow: visible !important;
+            }
+   
+            .iScrollIndicator {
+               background: #fcb316;
+               height: 9px !important;
+            }
+         }
+      }
+}

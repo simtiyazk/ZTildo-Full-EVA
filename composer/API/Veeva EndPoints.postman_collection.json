@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "c6a5d7e4-792d-45c1-b9d8-bc22f6681bdf",
+		"name": "Veeva EndPoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delete presentation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/presentation/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"presentation",
+						"4"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "filetoupload",
+							"type": "file",
+							"src": "/Users/carlosma/Documents/Road to Success - Homepage_.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/saveimage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"saveimage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Presentation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "charset",
+						"value": "UTF-8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"presentation\": \n    {\n    \"id\": null,\n    \"name\": \"Presentation 4\"\n    },\n    \"slides\": [\n      {\n        \"displayOrder\": 1,\n        \"backgroundUrl\": \"url\",\n        \"ctas\": [\n          {\n            \"position\": {\n              \"x\": 0,\n              \"y\": 0\n              },\n              \"size\": {\n                \"width\": 0,\n                \"height\": 0\n                }\n           }\n          ]\n      }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Presentation",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "charset",
+						"value": "UTF-8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"presentation\": \n    {\n    \"id\": 1,\n    \"name\": \"Presentation 1\"\n    },\n    \"slides\": [\n      {\n        \"displayOrder\": 1,\n        \"backgroundUrl\": \"url\",\n        \"ctas\": [\n          {\n            \"position\": {\n              \"x\": 0,\n              \"y\": 0\n              },\n              \"size\": {\n                \"width\": 0,\n                \"height\": 0\n                }\n           }\n          ]\n      }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Presentations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "charset",
+						"value": "UTF-8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"presentation\": \n    {\n    \"id\": 4,\n    \"name\": \"Presentation 4\"\n    },\n    \"slides\": [\n      {\n        \"displayOrder\": 1,\n        \"backgroundUrl\": \"url\",\n        \"ctas\": [\n          {\n            \"position\": {\n              \"x\": 0,\n              \"y\": 0\n              },\n              \"size\": {\n                \"width\": 0,\n                \"height\": 0\n                }\n           }\n          ]\n      }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get presentation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "charset",
+						"value": "UTF-8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"presentation\": \n    {\n    \"id\": 4,\n    \"name\": \"Presentation 4\"\n    },\n    \"slides\": [\n      {\n        \"displayOrder\": 1,\n        \"backgroundUrl\": \"url\",\n        \"ctas\": [\n          {\n            \"position\": {\n              \"x\": 0,\n              \"y\": 0\n              },\n              \"size\": {\n                \"width\": 0,\n                \"height\": 0\n                }\n           }\n          ]\n      }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/presentation/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"presentation",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

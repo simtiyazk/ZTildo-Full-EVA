@@ -1,0 +1,17 @@
+{
+  "name": "veevaproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "npm install -g nodemon && nodemon -L server.js",
+    "empty-db": "node emptydb.js"
+  },
+  "author": "Carlos Morales <cmorales@omnicomhealthgroup.com>",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "^1.2.2",
+    "sqlite3": "^5.0.2"
+  }
+}

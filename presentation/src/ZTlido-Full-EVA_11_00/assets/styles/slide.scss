@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/* SCSS Document */
+
+@import "../../shared/styles/core/index";
+
+
+/********** Slide Specific Styles *********/
+
+#ZTlido-Full-EVA_11_00 {
+    background: url('../images/background.jpg') right 0 no-repeat;
+    background-size: contain;
+}
+
+.slide__cta {
+   position: absolute;
+
+   a {
+      display: block;
+      width: 100%;
+      height: 100%;
+   }
+}
+
+#cta-0 {
+   top: 0%;
+   left: 9.57%;
+   width: 9.863%;
+   height: 6.51%;
+}
+
+#cta-1 {
+   top: 6.51%;
+   left: 15.82%;
+   width: 19.336%;
+   height: 3.906%;
+}
+
+#cta-2 {
+   top: 0%;
+   left: 34.57%;
+   width: 11.035%;
+   height: 6.51%;
+}
+
+#cta-3 {
+   top: 0%;
+   left: 46.387%;
+   width: 10.938%;
+   height: 6.51%;
+}
+
+#cta-4 {
+   top: 0%;
+   left: 58.203%;
+   width: 7.227%;
+   height: 6.51%;
+}
+
+#cta-5 {
+   top: 0%;
+   left: 66.113%;
+   width: 9.766%;
+   height: 6.51%;
+}
+
+#cta-6 {
+   top: 1.172%;
+   left: 80.664%;
+   width: 17.871%;
+   height: 9.896%;
+}
+
+#cta-7 {
+   top: 60.375%;
+   left: 68.945%;
+   width: 4.004%;
+   height: 4.557%;
+}
+
+#cta-8 {
+   top: 60.375%;
+   left: 94.141%;
+   width: 3.809%;
+   height: 4.818%;
+}
+
+#cta-9 {
+   top: 95.182%;
+   left: 43.75%;
+   width: 11.621%;
+   height: 4.818%;
+}
+
+#cta-10 {
+   top: 95.182%;
+   left: 55.566%;
+   width: 10.938%;
+   height: 4.818%;
+}
+
+#cta-11 {
+   top: 95.182%;
+   left: 66.797%;
+   width: 11.133%;
+   height: 4.818%;
+}
+
+#cta-12 {
+   top: 95.313%;
+   left: 78.223%;
+   width: 11.328%;
+   height: 4.688%;
+}
+
+.bar-graph-animation {
+   position: absolute;
+   width: 146px;
+   height: auto;
+   bottom: 13vh;
+   left: 9vw;
+   
+
+   &.barchart-animate {
+      animation: barchartanimate 1.4s ease-out;
+      -webkit-animation: barchartanimate 1.4s ease-out;
+   }
+}
+
+@keyframes barchartanimate {
+   from {
+      transform: scaleY(0);
+      transform-origin: bottom;
+   }
+   to {
+      transform: scaleY(1);
+      transform-origin: bottom;
+   }
+}
+
+@-webkit-keyframes barchartanimate {
+   from {
+      -webkit-transform: scaleY(0);
+      -webkit-transform-origin: bottom;
+   }
+   to {
+      -webkit-transform: scaleY(1);
+      -webkit-transform-origin: bottom;
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   #ZTlido-Full-EVA_11_00 {
+      background-size: 100% 100%;
+   }
+}

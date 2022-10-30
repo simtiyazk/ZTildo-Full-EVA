@@ -1,0 +1,67 @@
+.legal-popup {
+	top: 38px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+  height: 100%;
+  z-index: 11;
+
+  .legal-popup-bg {
+    width: 100%;
+  }
+
+  .legal-popup-close {
+    right: 27px;
+    top: 10px;
+  }
+
+  .document-scroll {
+    height: 600px;
+    overflow-y: scroll;
+    padding: 0 30px 0 60px;
+    position: absolute;
+    top: 134px;
+    width: 994px;
+
+    &::-webkit-scrollbar {
+      background-color: rgba(255,255,255, 0);
+      position: absolute;
+      right: 30px;
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #a6aaa9;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: #ececec;
+      border: 1px solid #c9c9c9;
+    }
+  }
+
+  .document-scroller-content {
+    width: 100%;
+  }
+
+  .isi-pi-cta {
+    height: 20px;
+    left: 164px;
+    position: absolute;
+    top: 1040px;
+    width: 164px;
+  }
+
+  &#med-guide-popup, &#pi-popup {
+    .document-scroll {
+      height: 639px;
+      padding: 0 30px 20px 60px;
+      top: 129px;
+    }
+    .document-scroller-content {
+      box-shadow: 3px 6px 6px rgba(0,0,0,0.3);
+    }
+  }
+}

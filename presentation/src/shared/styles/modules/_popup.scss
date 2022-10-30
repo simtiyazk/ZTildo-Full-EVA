@@ -1,0 +1,255 @@
+.popup {
+   &.hide {
+      display: none;
+   }
+
+   &.legal-popup {
+      top: 0;
+
+      .popup-close {
+         width: 20px;
+         height: 20px;
+         display: block;
+         position: absolute;
+         right: 27px;
+         top: 50px;
+         z-index: 10;
+      }
+   }
+
+   &.study-popup {
+      .popup-close {
+         top: 5px;
+         right: 10px;
+      }
+   }
+
+   &--tabs {
+      &.popup-tab-left {
+         .tab {
+            &-0 {
+               top: 17.4vh;
+            }
+
+            &-1 {
+               top: 25.6vh;
+            }
+
+            &-2 {
+               top: 33.9vh;
+            }
+
+            &-3 {
+               top: 42vh;
+            }
+
+            &-4 {
+               top: 50.4vh;
+            }
+         }
+      }
+
+      .tab-link {
+         position: absolute;
+         left: 3.2vw;
+         width: 18vw;
+         height: 7vh;
+         z-index: 2;
+      }
+
+      .custom {
+         &.tab-link {
+            position: absolute;
+            top: 39.9vw;
+            width: 4vw;
+            height: 5vh;
+            z-index: 2;
+
+            &.tab {
+               &-0 {
+                  left: 27.8vw;
+               }
+
+               &-1 {
+                  left: 40.5vw;
+               }
+
+               &-2 {
+                  left: 53.2vw;
+               }
+
+               &-3 {
+                  left: 66vw;
+               }
+
+               &-4 {
+                  left: 79.3vw;
+               }
+            }
+         }
+   }
+
+      .popup-tabs-triggers {
+         list-style: none;
+      }
+
+      .tab-link {
+         a {
+            display: block;
+            height: 100%;
+         }
+      }
+
+      .popup-tabs {
+         position: relative;
+      }
+
+      .tab-section {
+         &__image {
+            width: 100%;
+            border-radius: 16px;
+         }
+      }
+
+      .tab {
+         display: none;
+
+         &.active {
+            display: block;
+         }
+      }
+   }
+
+   .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgb(248,188,22);
+      background: linear-gradient(90deg, rgba(248,188,22,.5) 0%, rgba(71,49,146,.5) 87%);
+      width: 100vw;
+      height: 100%;
+      z-index: 1;
+   }
+
+   .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 89vw;
+      height: auto;
+      border-radius: 16px;
+      // box-shadow: 3px 3px 4px 0 rgba(0,0,0,.35);
+      z-index: 21;
+      transform: translate(-50%, -50%);
+      background-color: transparent;
+   }
+
+
+   .popup-close {
+      width: 22px;
+      height: 22px;
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      z-index: 10;
+      opacity: 0;
+   }
+
+   .popup-content {
+      width: 100%;
+      display: block;
+   }
+
+   .content-img {
+      width: 100%;
+   }
+
+   .inner-content {
+      position: absolute;
+      top: 68px;
+      left: 82px;
+      p,
+      li {
+         font-size: 15px;
+         line-height: 1.4;
+      }
+
+      .footnotes {
+         position: initial;
+         margin-bottom: 10px;
+         > p {
+            font-size: 10px;
+         }
+      }
+   }
+
+   .ref-content {
+      img {
+         width: 100%;
+      }
+   }
+
+}
+
+.popup-trigger {
+   outline: none;
+}
+
+.popup-btns {
+   bottom: 138px;
+   display: flex;
+   position: absolute;
+   right: 89px;
+   z-index: 8;
+
+
+   .ref-cta, .study-cta {
+      img {
+         width: 49px;
+      }
+   }
+
+   .ref-cta {
+      margin-left: 25px;
+   }
+}
+
+.legal-popup-btns {
+   position: absolute;
+   right: 47px;
+   top: 7px;
+   z-index: 12;
+
+   ul {
+      display: flex;
+      list-style: none;
+   }
+
+   button {
+      display: block;
+      height: 24px;
+      margin: 0;
+      text-indent: -999999px;
+      padding: 0;
+      width: 120px
+   }
+
+   li {
+      &:first-child {
+         margin-right: 10px;
+
+         button {
+            width: 160px;
+         }
+      }
+   }
+}
+
+.nav-open {
+   .legal-popup-btns {
+      button {
+         pointer-events: none;
+      }
+   }
+}

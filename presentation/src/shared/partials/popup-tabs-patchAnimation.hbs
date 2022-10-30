@@ -1,0 +1,52 @@
+<section class="popup popup--tabs {{type}} hide" id="{{id}}">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="popup-header">
+          <img class="popup-close" src="../shared/images/close-x.png" alt="">
+      </div>
+        <!-- PATCH ANIMATION -->
+        <div id="section_grid" class="">
+            <div id="scaleThis">
+              <div id="zt_number" class="grid_number">
+                  <div id="zt_number_counter" class="num">100<sup>%</sup></div>
+              </div>
+              <div id="generic_number" class="grid_number">
+                  <div id="generic_number_counter" class="num">80<sup>%</sup></div>
+              </div>
+              <div id="peel_container1"></div>
+              <div id="peel_container2"></div>
+            </div>
+            <!-- Dragger -->
+            <div id="grid_dragger">
+              <div class="slider_track">
+                  <div class="dragger">
+                    <div id="slider_num" class="label">0</div>
+                  </div>
+              </div>
+            </div>
+
+             <!-- Dragger for left tabs -->
+             <div id="grid_dragger_left" class="on">
+              <div class="slider_track">
+                 <div class="label anim-outside-cta actv" data-x="0">0 Hours</div>
+                 <div class="label anim-outside-cta" data-x="133">3 Hours</div>
+                 <div class="label anim-outside-cta" data-x="264">6 Hours</div>
+                 <div class="label anim-outside-cta" data-x="395">9 Hours</div>
+                 <div class="label anim-outside-cta" data-x="531">12 Hours</div>
+              </div>
+            </div>
+
+        </div>
+        <!-- END PATCH ANIMATION -->
+        {{!-- <div id="dragger_hider"></div> --}}
+
+     
+      <div class="popup-tab-container">
+        {{!-- {{#times tabs}} --}}
+          <div class="" id="">
+            <img class="tab-section__image" src="./assets/images/popup-tab-0.png"/>
+          </div>
+        {{!-- {{/times}} --}}
+      </div>
+    </div>
+</section>

@@ -1,0 +1,9 @@
+<ul class="breadcrumbs">
+   {{#each list}}
+      {{#if presentation}}
+         <li><a class="goToSlide {{isSelected}}" data-slide="{{url}}" data-presentation="{{presentation}}">{{{name}}}</a></li>
+      {{else}}
+         <li><a class="goToSlide {{isSelected}}" data-slide="{{url}}">{{{name}}}</a></li>
+      {{/if}}
+   {{/each}}
+</ul>

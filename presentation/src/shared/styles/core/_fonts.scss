@@ -1,0 +1,29 @@
+//
+// Typography
+// --------------------------------------------------
+
+$font-url: "../fonts";
+
+@font-face {
+  font-family: "Barlow-Regular";
+  src:
+    url($font-url+"/Barlow-Regular.otf") format("OpenType");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Barlow-SemiBold";
+  src:
+    url($font-url+"/Barlow-SemiBold.otf") format("OpenType");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Barlow-Bold";
+  src:
+    url($font-url+"/Barlow-Bold.otf") format("OpenType");
+  font-style: normal;
+  font-weight: normal;
+}

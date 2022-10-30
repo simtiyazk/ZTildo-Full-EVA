@@ -1,0 +1,56 @@
+@import "./variables";
+@import "./functions";
+
+body {
+  font-family: Helvetica, sans-serif !important;
+}
+// backgrounds
+.bg-darkblue {
+  background-color: $color-primary;
+}
+.bg-darkgray {
+  background-color: $color-secondary;
+}
+.bg-bondiblue {
+  background-color: $color-tertiary !important;
+}
+.bg-gray {
+  background-color: $color-grey;
+}
+//buttons
+%button {
+  padding: rem(12) rem(20);
+  font-size: rem(16);
+  border: none;
+  color: $color-white;
+  &:disabled {
+    opacity: .5;
+    cursor: no-drop;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    padding: rem(10) rem(15);
+  }
+}
+.button {
+  &-main {
+    @extend %button;
+    background-color: $color-tuna;
+  }
+  &-darkgrey {
+    @extend %button;
+    background-color: $color-secondary;
+  }
+  &-bondiblue {
+    @extend %button;
+    background-color: $color-tertiary;
+  }
+  &-danger {
+    @extend %button;
+    background-color: $color-red;
+  }
+  &-blue {
+    @extend %button;
+    background-color:  $color-blue;
+  }
+}

@@ -1,0 +1,7 @@
+export const slidesConfig = [
+  {{#each slides}}
+    '{{this.id}}'{{#if @last}}{{else}},{{/if}}
+  {{/each}}
+];
+
+export const presentationName = '{{ presentationId }}';

@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/* SCSS Document */
+
+@import "../../shared/styles/core/index";
+
+
+/********** Slide Specific Styles *********/
+
+#ZTlido-Full-EVA_15_30 {
+    background: url('../images/background.jpg') right 0 no-repeat;
+    background-size: contain;
+}
+
+.slide__cta {
+   position: absolute;
+
+   a {
+      display: block;
+      width: 100%;
+      height: 100%;
+   }
+}
+
+#cta-0 {
+   top: 0%;
+   left: 9.57%;
+   width: 9.863%;
+   height: 6.51%;
+}
+
+#cta-1 {
+   top: 0%;
+   left: 20.313%;
+   width: 13.281%;
+   height: 6.51%;
+}
+
+#cta-2 {
+   top: 0%;
+   left: 34.57%;
+   width: 11.133%;
+   height: 6.641%;
+}
+
+#cta-3 {
+   top: 0.13%;
+   left: 46.387%;
+   width: 11.133%;
+   height: 6.51%;
+}
+
+#cta-4 {
+   top: 0%;
+   left: 58.008%;
+   width: 9.082%;
+   height: 6.51%;
+}
+
+#cta-5 {
+   top: 1.172%;
+   left: 80.664%;
+   width: 17.871%;
+   height: 9.896%;
+}
+
+#cta-6 {
+   top: 6.38%;
+   left: 7.422%;
+   width: 7.324%;
+   height: 3.906%;
+}
+
+#cta-7 {
+   top: 6.641%;
+   left: 15.039%;
+   width: 6.348%;
+   height: 3.646%;
+}
+
+#cta-8 {
+   top: 6.51%;
+   left: 22.266%;
+   width: 11.914%;
+   height: 3.776%;
+}
+
+#cta-9 {
+   top: 6.641%;
+   left: 41.113%;
+   width: 6.055%;
+   height: 3.646%;
+}
+
+#cta-10 {
+   top: 6.641%;
+   left: 47.461%;
+   width: 21.094%;
+   height: 3.646%;
+}
+
+#cta-11 {
+   top: 95.443%;
+   left: 55.176%;
+   width: 11.328%;
+   height: 4.557%;
+}
+
+#cta-12 {
+   top: 95.443%;
+   left: 66.699%;
+   width: 11.328%;
+   height: 4.557%;
+}
+
+#cta-13 {
+   top: 95.313%;
+   left: 78.32%;
+   width: 11.035%;
+   height: 4.688%;
+}
+
+#flipCards-ar {
+   width: 60%;
+   height: auto;
+   position: absolute;
+   top: 21.4%;
+   left: 15.6%;
+
+.scene {
+   display: inline-block;
+    width: 203px;
+    height: 215px;
+    margin-right: 1.3%;
+    margin-bottom: 3%;
+    -webkit-perspective: 600px;
+    perspective: 600px;
+
+    .card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transform-origin: center right;
+      transition: transform 1s;
+
+      &.is-flipped {
+         transform: translateX(-100%) rotateY(-180deg);
+      }
+
+      .card__face {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         backface-visibility: hidden;
+       }
+       
+       .card__face--front {
+         background: transparent;
+       }
+       
+       .card__face--back {
+         background: transparent;
+         transform: rotateY(180deg);
+       }
+    }
+ }
+}
+
+@media screen and (min-width: 1024px) {
+   #ZTlido-Full-EVA_15_30 {
+      background-size: 100% 100%;
+   }
+}
+
+@media screen and (max-width: 1024px) {
+
+   #flipCards-ar {
+      width: 60%;
+      height: auto;
+      position: absolute;
+      top: 21.4%;
+      left: 13%;
+   
+   .scene {
+      display: inline-block;
+       width: 183px;
+       height: 195px;
+       margin-right: 1.3%;
+       margin-bottom: 3%;
+       -webkit-perspective: 600px;
+       perspective: 600px;
+   
+       .card {
+         position: relative;
+         width: 100%;
+         height: 100%;
+         cursor: pointer;
+         transform-style: preserve-3d;
+         transform-origin: center right;
+         transition: transform 1s;
+   
+         &.is-flipped {
+            transform: translateX(-100%) rotateY(-180deg);
+         }
+   
+         .card__face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+          }
+          
+          .card__face--front {
+            background: transparent;
+          }
+          
+          .card__face--back {
+            background: transparent;
+            transform: rotateY(180deg);
+          }
+       }
+    }
+   }
+}

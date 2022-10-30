@@ -1,0 +1,25 @@
+<section class="popup popup--tabs {{type}} hide" id="{{id}}">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="popup-header">
+          <img class="popup-close" src="../shared/images/close-x.png" alt="">
+      </div>
+      <ul class="popup-tabs-triggers">
+        {{#times tabs}}
+          <li class="tab-link tab-{{this}}"><a href="#" data-target="{{../prefix}}-{{this}}"></a></li>
+        {{/times}}
+        {{#if customtab}}
+        {{#times tabs}}
+          <li class="custom tab-link tab-{{this}}"><a href="#" data-target="{{../prefix}}-{{this}}"></a></li>
+        {{/times}}
+        {{/if}}
+      </ul>
+      <div class="popup-tab-container">
+        {{#times tabs}}
+          <div class="tab{{#ifEquals this 0}} active{{/ifEquals}}" id="{{../prefix}}-{{this}}">
+            <img class="tab-section__image" src="./assets/images/{{../prefix}}-{{this}}.png"/>
+          </div>
+        {{/times}}
+      </div>
+    </div>
+</section>

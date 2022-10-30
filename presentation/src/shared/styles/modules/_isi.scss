@@ -1,0 +1,42 @@
+.isi {
+   h2,
+   h3,
+   p,
+   li {
+      font-size: 14px;
+   }
+
+   .bold{
+      font-family: $font-cerapro-bold;
+   }
+
+   h2 {
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.044em;
+      text-transform: uppercase;
+
+      span {
+         margin-right: 4px;
+      }
+
+      a {
+         display: flex;
+         align-items: center;
+      }
+   }
+
+   .pi a {
+      padding-left: 5px;
+      display: inline-block;
+   }
+
+   .indication {
+      margin-bottom: 7px;
+
+      p {
+         line-height: 1.1;
+      }
+   }
+}
+
